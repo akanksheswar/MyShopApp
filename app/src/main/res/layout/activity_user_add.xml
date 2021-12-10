@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".customer_add"
+    android:background="#E4D126"
+    android:padding="15dp">
+
+    <TextView
+        android:id="@+id/Customer_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="Customer Details"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="45sp"
+        android:textStyle="bold|italic" />
+
+    <EditText
+        android:id="@+id/customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Customer_details"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_baseline_person_24"
+        android:drawablePadding="12dp"
+        android:hint="customer name"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        android:textSize="25dp"
+        android:textStyle="normal" />
+
+    <EditText
+        android:id="@+id/customer_phone_no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@id/customer_name"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_baseline_phone_24"
+        android:drawablePadding="12dp"
+        android:hint="phone number"
+        android:inputType="number"
+        android:maxLength="10"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        android:textSize="25dp"
+        android:textStyle="normal"/>
+
+    <EditText
+        android:id="@+id/customer_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customer_phone_no"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_input"
+        android:drawableStart="@drawable/ic_baseline_location_on_24"
+        android:drawablePadding="12dp"
+        android:hint="Address"
+        android:inputType="textPostalAddress"
+        android:padding="10dp"
+        android:textColorHint="@color/black"
+        android:textSize="25dp"
+        android:textStyle="normal" />
+
+    <Button
+        android:id="@+id/date"
+        style="?android:spinnerStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customer_address"
+        android:layout_marginTop="20dp"
+        android:onClick="datepicker"
+        android:text="January 01 2020"
+        android:textColor="@color/black"
+        android:textSize="30dp" />
+
+
+    <Spinner
+        android:id="@+id/time"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/date"
+        android:layout_marginTop="20dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit"
+        android:layout_below="@id/time"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="50dp"
+        android:text="submit"
+        android:onClick="submit"/>
+</RelativeLayout>

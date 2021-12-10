@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".booking_item_list"
+    android:background="#E4D126">
+
+  <TextView
+      android:id="@+id/bookindtext"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="3dp"
+      android:text="Booking Page"
+      android:textAlignment="center"
+      android:textSize="50dp"
+      android:textColor="@color/white"
+      android:textStyle="bold|italic"/>
+
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/itemstext"
+      android:layout_marginTop="10dp"
+      android:layout_below="@id/bookindtext"
+      android:text="list of items"
+      android:textStyle="bold|italic"
+      android:textSize="35dp"
+      android:textAlignment="center"
+      android:textColor="@color/white"/>
+
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="550dp"
+      android:layout_below="@id/itemstext"
+      android:id="@+id/scroll">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/li">
+    </ListView>
+
+  </ScrollView>
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/scroll"
+      android:layout_marginTop="5dp"
+      android:layout_marginLeft="150dp"
+      android:id="@+id/submit_list"
+      android:text="submit list"
+      android:onClick="submit_list"/>
+
+  </RelativeLayout>
